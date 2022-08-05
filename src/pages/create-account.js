@@ -9,7 +9,7 @@ import Link from 'next/link'
 import { useAuth } from '@/hooks/auth'
 import { useState } from 'react'
 
-const Register = () => {
+const CreateAccount = () => {
     const { register } = useAuth({
         middleware: 'guest',
         redirectIfAuthenticated: '/dashboard',
@@ -32,8 +32,9 @@ const Register = () => {
             <AuthCard
                 logo={
                     <Link href="/">
-                        <a>
-                            <ApplicationLogo className="w-20 h-20 fill-current text-gray-500" />
+                        <a className='text-5xl font-bold' href="#">
+                            <span>Fremont</span>
+                            <span className='text-indigo-700'>MI</span>
                         </a>
                     </Link>
                 }>
@@ -106,7 +107,7 @@ const Register = () => {
                     <div className="flex items-center justify-end mt-4">
                         <Link href="/login">
                             <a className="underline text-sm text-gray-600 hover:text-gray-900">
-                                Already registered?
+                                Already have an account?
                             </a>
                         </Link>
 
@@ -118,4 +119,4 @@ const Register = () => {
     )
 }
 
-export default Register
+export default CreateAccount
