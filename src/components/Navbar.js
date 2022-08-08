@@ -9,15 +9,15 @@ export default function Navbar() {
     return (
         <header className="bg-slate-100">
             <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-                <div className="w-full py-6 flex items-center justify-between border-b border-slate-300 lg:border-none">
+                <div className="w-full py-6 flex items-center justify-between border-b border-slate-300 md:border-none">
                     <div className="flex items-center">
                         <Link href='/'>
-                        <a className='text-3xl font-bold' href="#">
+                        <a className='text-3xl font-black' href="#">
                             <span>Fremont</span>
                             <span className='text-indigo-700'>MI</span>
                         </a>
                         </Link>
-                        <div className="hidden ml-10 space-x-8 lg:block">
+                        <div className="hidden ml-10 space-x-8 md:block">
                             {navigation.map((link) => (
                                 <a key={link.name} href={link.href} className="text-base font-medium text-slate-700 hover:text-slate-600">
                                     {link.name}
@@ -35,10 +35,10 @@ export default function Navbar() {
                     </Link>
                     </div>
                 </div>
-                <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
+                <div className="py-4 flex flex-wrap justify-center space-x-6 md:hidden">
                     {navigation.map((link) => (
                         <Link href={link.href}>
-                            <a key={link.name} className="text-base font-medium text-white hover:text-indigo-50">
+                            <a key={link.name} className="text-base font-medium text-slate-700 hover:text-indigo-50">
                                 {link.name}
                             </a>
                         </Link>
